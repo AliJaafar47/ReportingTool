@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  {% load static %}
+  <script src="{% static 'dist/handsontable.full.js' %}"></script>
+{% load static %}
+<link rel="stylesheet" media="screen" href="{% static 'dist/handsontable.full.css' %}">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/kendo.common.min.css' %}" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/kendo.rtl.min.css' %}" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/kendo.default.min.css' %}" />
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/kendo.mobile.all.min.css' %}" />
+  
+  
+  
+
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.common.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.rtl.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.default.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.1026/styles/kendo.mobile.all.min.css">
+  
+  
+  {% load static %}
+  <script src="{% static 'dist/jquery-1.12.3.min.js' %}"></script>
+  
+  <!-- <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  
+ <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/angular.min.js"></script> 
+ 
+ <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/jszip.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2017.3.1026/js/kendo.all.min.js"></script>-->
+
+  {% load static %}
+  <script src="{% static 'dist/jszip.min.js' %}"></script>
+
+  {% load static %}
+  <script src="{% static 'dist/kendo.all.min.js' %}"></script>
+
+<style type="text/css">
+.htCore > tbody > tr:nth-child(even) > td {
+    background-color: #cce6ff;
+}
+
+.htCore > tbody > tr:nth-child(odd) > td {
+    background-color: #e6f3ff;
+}
+.handsontable th {
+  background-color: #E1E0E3;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+		<table width="100%" cellpadding="4" cellspacing="0" border="0" bgcolor="#C7D01F">
+
+
+
+
+
+        <tbody><tr>
+          <th align="center">
+          {% load static %}
+		  <img src="{% static 'images/sah.png' %}" id="img_67c5a5c8" alt="" title="" width="80px"/>
+		  
+		  <h1>SoftAtHome Automated Report Generator</h1>
+		  <br>
+		  <p >version : 1.0.0 </p>
+		<br>
+		<br>
+    {% block other %}
+
+    {% endblock %}
+		  </th>
+        </tr>
+        <tr>
+          <td align="right">
+           {% block menubar %}
+
+    {% endblock %}
+          </td>
+
+        </tr>
+
+      </tbody>
+
+	  </table>
+
+			<div >
+      {% block content %}{% endblock %}
+      </div>
+      </div>
+			
+</body>
+</html>
